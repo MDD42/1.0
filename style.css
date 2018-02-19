@@ -1,0 +1,132 @@
+.win-left{
+	width: 1100px;
+	margin: auto;
+	margin-top: 30px;
+}
+
+.win-left-width-size{
+	width: 380px;
+	float: left;
+}
+
+.win-left-height-size{
+	width: 100%;
+	padding: 10px;
+	border-radius: 2px;	
+}
+
+input[type="radio"]:checked+.win-left-height-size{ 
+	background-color: DodgerBlue;
+	color: white; 
+} 
+
+hr{
+	border: none;
+	color: lightgrey;
+	background-color: lightgrey;
+	height: 1px;
+}
+
+input.radio, #del-list, #done-list{
+	display: none;
+}
+
+label{
+	font-size: 20px;
+	color: DodgerBlue;
+	cursor: pointer;
+}
+
+.win-right{
+	width: 680px;
+	margin-left: 20px;
+	float: right;
+}
+
+.wrap-all:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.list-header{
+	padding: 50px 30px;
+	border-radius: 5px;
+	background-color: WhiteSmoke;
+}
+
+.list-header h1{
+	margin-top: 0;
+}
+
+input::-webkit-input-placeholder {color: rgb(185, 185, 185);}
+input::-moz-placeholder          {color: rgb(185, 185, 185);}
+input:-moz-placeholder           {color: rgb(185, 185, 185);}
+input:-ms-input-placeholder      {color: rgb(185, 185, 185);}
+
+.form input, .form button{
+	width: 9%;
+	margin: 2% 2% 0;
+	border: 1px solid lightgrey;
+	padding: 10px 7px;
+	border-radius: 4px;
+}
+
+.form input:first-child{
+	width: 50%;
+	margin-left: 0;
+}
+
+#add{
+	margin-right: 0;
+	background-color: limegreen;
+	color: white;
+}
+
+.win-table{
+	margin-top: 30px;
+}
+
+tr{
+	height: 50px;
+}
+
+.table tr:nth-child(odd){
+	background-color: lightgrey;
+}
+
+.table tr:first-child{
+	color: white;
+	background-color: black;
+}
+
+.total tr:last-child{
+	background-color: darkgrey;
+}
+
+.update, .remove{
+	display: block;
+	width: 35px;
+	height: 35px;
+	padding: 0;
+	color: white;
+	border: none;
+	margin: 0 20px;
+	border-radius: 5px;
+	font-size: 20px;
+}
+
+.update{
+	float: right;
+	background-color: rgb(255, 140, 0);
+}
+.remove{
+	float: right;
+	background-color: rgb(255, 0, 0);
+}
+
+
+
+#totalPrice{
+	text-align: right;
+}

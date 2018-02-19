@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Shopping List</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="win-left">
+		<div class="win-left-width-size">
+			<label>
+				<input class="radio" name="list" type="radio" value="Shopping list" checked onclick="tabShop();">
+				<div class="win-left-height-size">Shopping list</div>
+			</label>
+			<label>
+				<input class="radio" name="list" type="radio" value="Done" onclick="tabDone();" >
+				<div class="win-left-height-size">Done</div>
+			</label>
+			<label>
+				<input class="radio" name="list" type="radio" value="Deleted" onclick="tabDel();" >
+				<div class="win-left-height-size">Deleted</div>
+			</label>
+		</div>
+		<div class="win-right">
+			<div id="shopping-list">
+				<div class="list-header">
+					<h1>Shopping List</h1>
+					<hr>
+					<div class="form" id= 'add-form'>
+						<input id="item" type="text" name="item" placeholder="Add items to your Shopping List">
+						<input id="quantity" type="text" name="quantity" placeholder="Quant.">
+						<input id="price" type="text" name="price" placeholder="Price">
+						<button id="add" name="submit">Add</button>
+					</div>
+				</div>
+				<div class="win-table">
+					<table width="100%" cellspacing="0" cellpadding="4">
+						<tbody id="table-shop" class="table">
+							<tr>
+								<td>#</td>
+								<td>Done</td>
+								<td>Item</td>
+								<td>Quantity</td>
+								<td>Price $</td>
+								<td>Action</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="total" width="100%" cellspacing="0" cellpadding="4">
+						<tr>
+							<td width="410px"></td>
+							<td>Total:</td>
+							<td><span id="totalPrice"></span></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div id="done-list">
+				<div class="list-header">
+					<h1>Done Items</h1>
+				</div>
+				<div class="win-table">
+					<table width="100%" cellspacing="0" cellpadding="4">
+						<tbody id="table-done" class="table">
+							<tr>
+								<td>#</td>
+								<td>Done</td>
+								<td>Item</td>
+								<td>Quantity</td>
+								<td>Price $</td>
+								<td>Action</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="total" width="100%" cellspacing="0" cellpadding="4">
+						<tr>
+							<td width="410px"></td>
+							<td>Total:</td>
+							<td><span id="totalPrice"></span></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div id="del-list">
+				<div class="list-header">
+					<h1>Deleted Items</h1>
+				</div>
+				<div class="win-table">
+					<table width="100%" cellspacing="0" cellpadding="4">
+						<tbody id="table-del" class="table">
+							<tr>
+								<td>#</td>
+								<td>Done</td>
+								<td>Item</td>
+								<td>Quantity</td>
+								<td>Price $</td>
+								<td>Action</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="total" width="100%" cellspacing="0" cellpadding="4">
+						<tr>
+							<td width="410px"></td>
+							<td>Total:</td>
+							<td><span id="totalPrice"></span></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<script src="js.js"></script>
+</body>
