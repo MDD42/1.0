@@ -40,7 +40,22 @@ document.getElementById("add").addEventListener("click", function() {
 	out(tableShop, shopList);
 	});
 
+function countTotal() {
+	const total = shopList.reduce(function(sum, item) { return sum += item.price});
+	document.querySelector('#totalPrice').innerText = total;
+}
 
+	// function total (){
+	// 	var total = 0;
+	// 	var totalPrice = 0;
+	// 	Quantity = document.getElementById('quantity').value, 
+	// 	Price = document.getElementById('price').value,
+	// 	totalPrice = (Price * Quantity);
+	// 	total
+	
+	// 	document.getElementById('totalPrice').innerHTML = totalPrice;
+	// }
+	
 
 
 	// var total = 0;
@@ -108,17 +123,6 @@ function addRow(targetTable) {
 	targetTable.appendChild(tr);
 }
 
-
-function total (){
-	var table = getElementsByClassName ("table");
-	var totalPrice = 0;
-	tdQuantity = document.createElement('td'), 
-	tdPrice = document.createElement('td'),
-	totalPrice = (tdPrice * tdQuantity);
-	// for (var i=0; i<table.length; i++)
-
-	document.getElementById('totalPrice').innerHTML = totalPrice;
-}
 
 
 
