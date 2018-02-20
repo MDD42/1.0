@@ -32,6 +32,9 @@ function Purchase(number, done, del, item, quantity, price) {
 	this.price = price;
 }
 
+
+
+
 document.getElementById("add").addEventListener("click", function() {
 	shopList[shopList.length] = new Purchase(shopList.length+1, false, false,
 	document.getElementById('item').value,
@@ -40,44 +43,10 @@ document.getElementById("add").addEventListener("click", function() {
 	out(tableShop, shopList);
 	});
 
-
-
-
-	// var total = 0;
-	// // инициализация где-то вверху переменной куда будем писать сумму покупок
-	// function increaseTotal(amount) {
-	// 	total += amount , renderTotal()
-	// } 
-	// function renderTotal() {
-	// // просто отображает значение из переменной тотал на веб страницу
-	// }
-	// и 
-	// decreaseTotal(amount) {
-	// // вызывается при удаление и тоже вызывает renderTotal()
-	// }
-
-
-// function addItem(event) {
-// 	event.preventDefault();
-
-// 	if (addInput.value === '') {
-// 		return alert('Необходимо ввести название.');
-// 	}
-
-// 	const targetItem = createShopItem(addInput.value);
-// 	targetList.appendChild(targetItem);
-// 	addInput.value = '';
-// }
-
-// const AddForm = document.getElementById('add-form');
-// const additem = document.getElementById('item');
-// const shoppingList = document.getElementById('shopping-list');
-// const tableItems = document.querySelectorAll('.table');
-
-// function main() {
-//     AddForm.addEventListener('submit', addshopItem);
-//     tableItems.forEach(item => bindEvents(item));
-// }
+function countTotal() {
+	const total = shopList.reduce(function(sum, item) { return sum += item.price});
+	document.getElementById('totalPrice').innerText = total;
+	}
 
 
 function addRow(targetTable) {
@@ -107,49 +76,6 @@ function addRow(targetTable) {
 	tdAction.appendChild(updateButton);
 	targetTable.appendChild(tr);
 }
-
-
-function total (){
-	var table = getElementsByClassName ("table");
-	var totalPrice = 0;
-	tdQuantity = document.createElement('td'), 
-	tdPrice = document.createElement('td'),
-	totalPrice = (tdPrice * tdQuantity);
-	// for (var i=0; i<table.length; i++)
-
-	document.getElementById('totalPrice').innerHTML = totalPrice;
-}
-
-
-
-
-
-// var fullTotal = function () {
-// 	var totalPrice = 0;
-// 	var quantity = document.getElementsByTagName('td')[3].innerHTML;
-// 	var price = document.getElementsByTagName('td')[4].innerHTML;
-	
-// 	var totalPrice = (quantity * price);
-// }
-// document.getElementById('totalPrice').innerHTML = totalPrice;
-
-
-
-// var tdSpan = document.querySelectorAll('.xspColumnViewStart > span'),
-//     sum = 0;
-// [].forEach.call(tdSpan, function(s){
-//     sum += +s.innerHTML;
-// });
-// console.log(sum);
-
-
-// function f(){
-//     var p = document.getElementById('prod').value,
-//         n = document.getElementById('num').value,
-//         s = document.getElementById('sum').value = Number(p) * Number(n);
-// }
-
-
 
 
 function done(item) {
